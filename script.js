@@ -48,3 +48,18 @@ function showSlide(index) {
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(0);
 });
+
+var swiper = new Swiper(".myBooksSwiper", {
+    slidesPerView: 1,      /* موبايل */
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        768: { slidesPerView: 2 }, /* تابلت */
+        1024: { slidesPerView: 3 } /* كمبيوتر: 3 في الصف */
+    }
+});
+
